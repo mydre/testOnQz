@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA435ABE-5714-4853-BD6A-D744A8886FE2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WinAppDemo</RootNamespace>
+    <AssemblyName>WinAppDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.111.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.111.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.111.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppContext.cs" />
+    <Compile Include="Controls\UcAjgl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcAjgl.Designer.cs">
+      <DependentUpon>UcAjgl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcTools.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcTools.Designer.cs">
+      <DependentUpon>UcTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcZjtq.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcZjtq.Designer.cs">
+      <DependentUpon>UcZjtq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_JX.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_JX.Designer.cs">
+      <DependentUpon>UcZjtq_JX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_Lj.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_Lj.Designer.cs">
+      <DependentUpon>UcZjtq_SJ_Lj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_QZ6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_QZ6.Designer.cs">
+      <DependentUpon>UcZjtq_SJ_QZ6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_QZ5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_QZ5.Designer.cs">
+      <DependentUpon>UcZjtq_SJ_QZ5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_QZ4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_QZ4.Designer.cs">
+      <DependentUpon>UcZjtq_SJ_QZ4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_QZ3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_QZ3.Designer.cs">
+      <DependentUpon>UcZjtq_SJ_QZ3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_QZ2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_QZ2.Designer.cs">
+      <DependentUpon>UcZjtq_SJ_QZ2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_QZ1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_QZ1.Designer.cs">
+      <DependentUpon>UcZjtq_SJ_QZ1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_Ljcg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ_Ljcg.Designer.cs">
+      <DependentUpon>UcZjtq_SJ_Ljcg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcZjtq_SJ.Designer.cs">
+      <DependentUpon>UcZjtq_SJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcZjzs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcZjzs.Designer.cs">
+      <DependentUpon>UcZjzs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Db\Base\SqliteDbContext.cs" />
+    <Compile Include="Db\Model\User.cs" />
+    <Compile Include="Db\Model\WxAccount.cs" />
+    <Compile Include="Db\Model\WxMessage.cs" />
+    <Compile Include="Forms\FormGjglNewAj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGjglNewAj.Designer.cs">
+      <DependentUpon>FormGjglNewAj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGjglBf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGjglBf.Designer.cs">
+      <DependentUpon>FormGjglBf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGjglZzqkWc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGjglZzqkWc.Designer.cs">
+      <DependentUpon>FormGjglZzqkWc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGjglZzqk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGjglZzqk.Designer.cs">
+      <DependentUpon>FormGjglZzqk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGjglZzxx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGjglZzxx.Designer.cs">
+      <DependentUpon>FormGjglZzxx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGjglZzqx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGjglZzqx.Designer.cs">
+      <DependentUpon>FormGjglZzqx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\UcAjgl.resx">
+      <DependentUpon>UcAjgl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcZjtq.resx">
+      <DependentUpon>UcZjtq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcZjtq_JX.resx">
+      <DependentUpon>UcZjtq_JX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcZjtq_SJ_Lj.resx">
+      <DependentUpon>UcZjtq_SJ_Lj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcZjtq_SJ_QZ6.resx">
+      <DependentUpon>UcZjtq_SJ_QZ6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcZjtq_SJ_QZ5.resx">
+      <DependentUpon>UcZjtq_SJ_QZ5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcZjtq_SJ_QZ4.resx">
+      <DependentUpon>UcZjtq_SJ_QZ4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcZjtq_SJ_QZ3.resx">
+      <DependentUpon>UcZjtq_SJ_QZ3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcZjtq_SJ_QZ2.resx">
+      <DependentUpon>UcZjtq_SJ_QZ2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcZjtq_SJ_QZ1.resx">
+      <DependentUpon>UcZjtq_SJ_QZ1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcZjtq_SJ_Ljcg.resx">
+      <DependentUpon>UcZjtq_SJ_Ljcg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcZjtq_SJ.resx">
+      <DependentUpon>UcZjtq_SJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcZjzs.resx">
+      <DependentUpon>UcZjzs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGjglNewAj.resx">
+      <DependentUpon>FormGjglNewAj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGjglBf.resx">
+      <DependentUpon>FormGjglBf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGjglZzqkWc.resx">
+      <DependentUpon>FormGjglZzqkWc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGjglZzqk.resx">
+      <DependentUpon>FormGjglZzqk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGjglZzxx.resx">
+      <DependentUpon>FormGjglZzxx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGjglZzqx.resx">
+      <DependentUpon>FormGjglZzqx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajgl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajgl1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gj1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zjtq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zjtq1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zjzs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zjzs1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right2.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\test1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\test2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\test3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>
