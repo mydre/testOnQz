@@ -152,6 +152,7 @@
     <Compile Include="Db\Base\SqliteDbContext.cs" />
     <Compile Include="Db\Model\User.cs" />
     <Compile Include="Db\Model\WxAccount.cs" />
+    <Compile Include="Db\Model\WxFriend.cs" />
     <Compile Include="Db\Model\WxMessage.cs" />
     <Compile Include="Forms\FormGjglNewAj.cs">
       <SubType>Form</SubType>

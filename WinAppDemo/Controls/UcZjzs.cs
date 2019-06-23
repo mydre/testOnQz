@@ -34,9 +34,13 @@ namespace WinAppDemo.Controls
 
             using (SqliteDbContext context = new SqliteDbContext())
             {
-                Types.AddRange(context.WxAccounts
-                    .ToArray()
-                    .Select((acc, index) => new TreeNodeTypes() { Id = 7 + index, Name = acc.Sign, ParentId = 6, Value = acc.WxId }));
+                context.WxAccounts.ToList().ForEach(acc =>
+                {
+                    int index = Types.Count + 1;
+                    Types.Add(new TreeNodeTypes() { Id = index, Name = acc.Sign, ParentId = 6, Value = acc.WxId });
+                    Types.Add(new TreeNodeTypes() { Id = index + 1, Name = "好友", ParentId = index, Value = "好友" });
+                    Types.Add(new TreeNodeTypes() { Id = index + 2, Name = "公众号", ParentId = index, Value = "公众号" });
+                });
             }
 
             var topNode = new TreeNode();
@@ -68,37 +72,69 @@ namespace WinAppDemo.Controls
             string wxid = e.Node.Tag as string;
             string id = e.Node.Name;
 
-            WxAccount acc = null;
-            using (SqliteDbContext context = new SqliteDbContext())
+            switch (wxid)
             {
-                acc = context.WxAccounts.FirstOrDefault(a => a.WxId == wxid);
-            }
-
-            if (acc == null)
-            {
-                if (Types != null && Types.Count > 0)
-                {
-                    foreach (TreeNodeTypes tnt in Types)
+                case "好友":
+                case "公众号":
                     {
-                        if (Convert.ToString(tnt.Id) == id)
+                        int type = wxid == "好友" ? 3 : 33;
+
+                        panel1.Hide();
+                        panel2.Show();
+                        panel2.Dock = DockStyle.Fill;
+
+                        listBox1.Items.Clear();
+                        using (SqliteDbContext context = new SqliteDbContext())
                         {
-                            lblCode.Text = tnt.Value;
-                            lblName.Text = tnt.Name;
-                            label8.Text = string.Empty;
-                            label9.Text = string.Empty;
-                            label10.Text = string.Empty;
-                            break;
+                            listBox1.Items.AddRange(context.WxFriends
+                                .ToArray()
+                                .Where(friend => friend.Type == type)
+                                .Select(friend => $"{friend.NickName.PadRight(30)}\t\t({friend.WxId})")
+                                .ToArray());
                         }
+
+                        break;
                     }
-                }
-            }
-            else
-            {
-                lblCode.Text = acc.WxId;
-                lblName.Text = acc.Sign;
-                label8.Text = acc.Phone;
-                label9.Text = acc.NickName;
-                label10.Text = acc.District;
+                default:
+                    {
+                        panel2.Hide();
+                        panel1.Show();
+                        panel1.Dock = DockStyle.Fill;
+                        WxAccount acc = null;
+                        using (SqliteDbContext context = new SqliteDbContext())
+                        {
+                            acc = context.WxAccounts.FirstOrDefault(a => a.WxId == wxid);
+                        }
+
+                        if (acc == null)
+                        {
+                            if (Types != null && Types.Count > 0)
+                            {
+                                foreach (TreeNodeTypes tnt in Types)
+                                {
+                                    if (Convert.ToString(tnt.Id) == id)
+                                    {
+                                        lblCode.Text = tnt.Value;
+                                        lblName.Text = tnt.Name;
+                                        label8.Text = string.Empty;
+                                        label9.Text = string.Empty;
+                                        label10.Text = string.Empty;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            lblCode.Text = acc.WxId;
+                            lblName.Text = acc.Sign;
+                            label8.Text = acc.Phone;
+                            label9.Text = acc.NickName;
+                            label10.Text = acc.District;
+                        }
+
+                        break;
+                    }
             }
         }
     }
