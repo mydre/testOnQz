@@ -40,6 +40,7 @@ namespace WinAppDemo.Controls
                     Types.Add(new TreeNodeTypes() { Id = index, Name = acc.Sign, ParentId = 6, Value = acc.WxId });
                     Types.Add(new TreeNodeTypes() { Id = index + 1, Name = "好友", ParentId = index, Value = "好友" });
                     Types.Add(new TreeNodeTypes() { Id = index + 2, Name = "公众号", ParentId = index, Value = "公众号" });
+                    Types.Add(new TreeNodeTypes() { Id = index + 3, Name = "聊天记录", ParentId = index, Value = "聊天记录" });
                 });
             }
 
@@ -80,6 +81,7 @@ namespace WinAppDemo.Controls
                         int type = wxid == "好友" ? 3 : 33;
 
                         panel1.Hide();
+                        panel3.Hide();
                         panel2.Show();
                         panel2.Dock = DockStyle.Fill;
 
@@ -95,9 +97,28 @@ namespace WinAppDemo.Controls
 
                         break;
                     }
+                case "聊天记录":
+                    {
+                        panel1.Hide();
+                        panel2.Hide();
+                        panel3.Show();
+                        panel3.Dock = DockStyle.Fill;
+
+                        listBox2.Items.Clear();
+                        using (SqliteDbContext context = new SqliteDbContext())
+                        {
+                            listBox2.Items.AddRange(context.WxFriends
+                                .ToArray()
+                                .Where(friend => friend.Type == 3)
+                                .ToArray());
+                        }
+
+                        break;
+                    }
                 default:
                     {
                         panel2.Hide();
+                        panel3.Hide();
                         panel1.Show();
                         panel1.Dock = DockStyle.Fill;
                         WxAccount acc = null;
@@ -135,6 +156,45 @@ namespace WinAppDemo.Controls
 
                         break;
                     }
+            }
+        }
+
+        private void ListBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            WxFriend friend = listBox2.SelectedItem as WxFriend;
+            if (friend == null)
+            {
+                return;
+            }
+
+            using (SqliteDbContext context = new SqliteDbContext())
+            {
+                var messages = context.WxMessages
+                    .Where(m => m.WxId == friend.WxId)
+                    .OrderBy(m => m.CraeteTime)
+                    .ToList();
+
+                messages.ForEach(m =>
+                {
+                    if (m.IsSend == 1)
+                    {
+                        richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
+                        richTextBox1.SelectionColor = Color.DimGray;
+                        richTextBox1.AppendText($"{m.CraeteTime}\n");
+                        richTextBox1.SelectionColor = Color.Red;
+                    }
+                    else
+                    {
+                        richTextBox1.SelectionAlignment = HorizontalAlignment.Left;
+                        richTextBox1.SelectionColor = Color.DimGray;
+                        richTextBox1.AppendText($"{m.CraeteTime}\n");
+                        richTextBox1.SelectionColor = Color.Blue;
+                    }
+
+                    richTextBox1.AppendText($"{m.Content}\n\n");
+                });
+                // richTextBox1.Text = string.Join("\n\n\n", messages.Select(m => m.Content));
             }
         }
     }

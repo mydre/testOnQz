@@ -45,5 +45,8 @@ namespace WinAppDemo.Db.Model
 
         [Column("chatFrom")]
         public string ChatFrom { get; set; }
+
+        public override string ToString()
+            => this.NickName;
     }
 }
