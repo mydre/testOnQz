@@ -85,14 +85,12 @@ namespace WinAppDemo.Controls
                         panel2.Show();
                         panel2.Dock = DockStyle.Fill;
 
-                        listBox1.Items.Clear();
+                        this.dataGridView1.DataSource = null;
                         using (SqliteDbContext context = new SqliteDbContext())
                         {
-                            listBox1.Items.AddRange(context.WxFriends
-                                .ToArray()
+                            this.dataGridView1.DataSource = context.WxFriends
                                 .Where(friend => friend.Type == type)
-                                .Select(friend => $"{friend.NickName.PadRight(30)}\t\t({friend.WxId})")
-                                .ToArray());
+                                .ToList();
                         }
 
                         break;
@@ -104,12 +102,18 @@ namespace WinAppDemo.Controls
                         panel3.Show();
                         panel3.Dock = DockStyle.Fill;
 
-                        listBox2.Items.Clear();
+                        this.dataGridView2.Rows.Clear();
                         using (SqliteDbContext context = new SqliteDbContext())
                         {
-                            listBox2.Items.AddRange(context.WxFriends
-                                .ToArray()
+                            this.dataGridView2.Rows.AddRange(
+                                context.WxFriends
                                 .Where(friend => friend.Type == 3)
+                                .Select(new Func<WxFriend, DataGridViewRow>(f =>
+                                {
+                                    var row = new DataGridViewRow();
+                                    row.CreateCells(this.dataGridView2, new[] { f.NickName, context.WxMessages.Count(m => m.WxId == f.WxId).ToString() });
+                                    return row;
+                                }))
                                 .ToArray());
                         }
 
@@ -159,17 +163,23 @@ namespace WinAppDemo.Controls
             }
         }
 
-        private void ListBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            richTextBox1.Clear();
-            WxFriend friend = listBox2.SelectedItem as WxFriend;
-            if (friend == null)
+            if (e.RowIndex < 0)
             {
                 return;
             }
 
             using (SqliteDbContext context = new SqliteDbContext())
             {
+                richTextBox1.Clear();
+                string nickName = this.dataGridView2.Rows[e.RowIndex].Cells[0].Value as string;
+                WxFriend friend = context.WxFriends.FirstOrDefault(f => f.NickName == nickName);
+                if (friend == null)
+                {
+                    return;
+                }
+
                 var messages = context.WxMessages
                     .Where(m => m.WxId == friend.WxId)
                     .OrderBy(m => m.CraeteTime)
@@ -192,9 +202,9 @@ namespace WinAppDemo.Controls
                         richTextBox1.SelectionColor = Color.Blue;
                     }
 
+                    richTextBox1.SelectionBackColor = Color.WhiteSmoke;
                     richTextBox1.AppendText($"{m.Content}\n\n");
                 });
-                // richTextBox1.Text = string.Join("\n\n\n", messages.Select(m => m.Content));
             }
         }
     }

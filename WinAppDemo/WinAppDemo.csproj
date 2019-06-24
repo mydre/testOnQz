@@ -236,6 +236,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UcZjzs.resx">
       <DependentUpon>UcZjzs.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormGjglNewAj.resx">
       <DependentUpon>FormGjglNewAj.cs</DependentUpon>
@@ -272,6 +273,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\WinAppDemo.Db.Model.WxFriend.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
