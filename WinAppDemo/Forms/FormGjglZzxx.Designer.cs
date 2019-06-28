@@ -115,6 +115,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(230, 21);
             this.textBox4.TabIndex = 31;
+            this.textBox4.Text = "XXX";
             // 
             // label6
             // 
@@ -131,6 +132,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(230, 21);
             this.textBox3.TabIndex = 29;
+            this.textBox3.Text = "137XXX";
             // 
             // label5
             // 
@@ -182,6 +184,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(230, 21);
             this.textBox1.TabIndex = 22;
+            this.textBox1.Text = "新的证据";
             // 
             // label1
             // 
@@ -208,6 +211,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(230, 21);
             this.textBox6.TabIndex = 43;
+            this.textBox6.Text = "158XXX";
             // 
             // FormGjglZzxx
             // 

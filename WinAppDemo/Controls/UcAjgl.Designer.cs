@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -53,29 +54,48 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WxId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AccountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sign = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NickName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.District = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.caseIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caseNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caseSerialNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caseTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.collecterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inspectionPersonNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.objectNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.organizationCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createCaseTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.proofIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caseIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proofNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proofSerialNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.holderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.credentialsSerialNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deviceTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proofTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phonePwdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createProofTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iMEIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iMEI2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneBrandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressBookCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qqDataCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.callRecordsCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.momoDataCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wxDataCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proofBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -85,9 +105,11 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.caseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proofBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -104,27 +126,37 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.WxId,
-            this.AccountId,
-            this.Phone,
-            this.Sign,
-            this.NickName,
-            this.District,
-            this.Column8});
+            this.caseIdDataGridViewTextBoxColumn,
+            this.caseNameDataGridViewTextBoxColumn,
+            this.caseSerialNumDataGridViewTextBoxColumn,
+            this.caseTypeDataGridViewTextBoxColumn,
+            this.collecterDataGridViewTextBoxColumn,
+            this.inspectionPersonNameDataGridViewTextBoxColumn,
+            this.noteDataGridViewTextBoxColumn,
+            this.objectNameDataGridViewTextBoxColumn,
+            this.manufacturerNameDataGridViewTextBoxColumn,
+            this.organizationCodeDataGridViewTextBoxColumn,
+            this.createCaseTimeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.caseBindingSource;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(7, 64);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(691, 896);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.DataGridView1_SelectionChanged);
             // 
             // panel1
             // 
@@ -331,22 +363,42 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
+            this.proofIdDataGridViewTextBoxColumn,
+            this.caseIDDataGridViewTextBoxColumn1,
+            this.proofNameDataGridViewTextBoxColumn,
+            this.proofSerialNumDataGridViewTextBoxColumn,
+            this.phoneNumDataGridViewTextBoxColumn,
+            this.holderDataGridViewTextBoxColumn,
+            this.credentialsSerialNumDataGridViewTextBoxColumn,
+            this.startTimeDataGridViewTextBoxColumn,
+            this.endTimeDataGridViewTextBoxColumn,
+            this.deviceTypeDataGridViewTextBoxColumn,
+            this.proofTypeDataGridViewTextBoxColumn,
+            this.phonePwdDataGridViewTextBoxColumn,
+            this.createProofTimeDataGridViewTextBoxColumn,
+            this.iMEIDataGridViewTextBoxColumn,
+            this.iMEI2DataGridViewTextBoxColumn,
+            this.phoneBrandDataGridViewTextBoxColumn,
+            this.phoneDataCountDataGridViewTextBoxColumn,
+            this.addressBookCountDataGridViewTextBoxColumn,
+            this.qqDataCountDataGridViewTextBoxColumn,
+            this.callRecordsCountDataGridViewTextBoxColumn,
+            this.momoDataCountDataGridViewTextBoxColumn,
+            this.wxDataCountDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.proofBindingSource;
+            this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView2.Location = new System.Drawing.Point(7, 72);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 23;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(567, 775);
@@ -370,57 +422,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(1315, 969);
             this.splitContainer1.SplitterDistance = 704;
             this.splitContainer1.TabIndex = 2;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(6, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(630, 93);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "案件信息";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "案件名称";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(118, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 12);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "案件名称";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(33, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "案件名称";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(118, 61);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 12);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "案件名称";
             // 
             // panel3
             // 
@@ -449,124 +450,295 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "证据列表";
             // 
-            // Id
+            // groupBox3
             // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "序号";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Location = new System.Drawing.Point(6, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(630, 93);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "案件信息";
             // 
-            // WxId
+            // label7
             // 
-            this.WxId.DataPropertyName = "WxId";
-            this.WxId.HeaderText = "案件名称";
-            this.WxId.Name = "WxId";
-            this.WxId.ReadOnly = true;
-            this.WxId.Width = 200;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(118, 61);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 12);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "案件名称";
             // 
-            // AccountId
+            // label6
             // 
-            this.AccountId.DataPropertyName = "AccountId";
-            this.AccountId.HeaderText = "案件类型";
-            this.AccountId.Name = "AccountId";
-            this.AccountId.ReadOnly = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(33, 61);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "案件名称";
             // 
-            // Phone
+            // label5
             // 
-            this.Phone.DataPropertyName = "Phone";
-            this.Phone.HeaderText = "案件编号";
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(118, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 12);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "案件名称";
             // 
-            // Sign
+            // label4
             // 
-            this.Sign.DataPropertyName = "Sign";
-            this.Sign.HeaderText = "创建时间";
-            this.Sign.Name = "Sign";
-            this.Sign.ReadOnly = true;
-            this.Sign.Width = 120;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(33, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 12);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "案件名称";
             // 
-            // NickName
+            // caseIdDataGridViewTextBoxColumn
             // 
-            this.NickName.DataPropertyName = "NickName";
-            this.NickName.HeaderText = "采集人";
-            this.NickName.Name = "NickName";
-            this.NickName.ReadOnly = true;
+            this.caseIdDataGridViewTextBoxColumn.DataPropertyName = "CaseId";
+            this.caseIdDataGridViewTextBoxColumn.HeaderText = "案件编号";
+            this.caseIdDataGridViewTextBoxColumn.Name = "caseIdDataGridViewTextBoxColumn";
+            this.caseIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // District
+            // caseNameDataGridViewTextBoxColumn
             // 
-            this.District.DataPropertyName = "District";
-            this.District.HeaderText = "备注";
-            this.District.Name = "District";
-            this.District.ReadOnly = true;
-            this.District.Width = 200;
+            this.caseNameDataGridViewTextBoxColumn.DataPropertyName = "CaseName";
+            this.caseNameDataGridViewTextBoxColumn.HeaderText = "案件名称";
+            this.caseNameDataGridViewTextBoxColumn.Name = "caseNameDataGridViewTextBoxColumn";
+            this.caseNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Column8
+            // caseSerialNumDataGridViewTextBoxColumn
             // 
-            this.Column8.HeaderText = "操作";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
+            this.caseSerialNumDataGridViewTextBoxColumn.DataPropertyName = "CaseSerialNum";
+            this.caseSerialNumDataGridViewTextBoxColumn.HeaderText = "案件序号";
+            this.caseSerialNumDataGridViewTextBoxColumn.Name = "caseSerialNumDataGridViewTextBoxColumn";
+            this.caseSerialNumDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // caseTypeDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "序号";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.caseTypeDataGridViewTextBoxColumn.DataPropertyName = "CaseType";
+            this.caseTypeDataGridViewTextBoxColumn.HeaderText = "案件类型";
+            this.caseTypeDataGridViewTextBoxColumn.Name = "caseTypeDataGridViewTextBoxColumn";
+            this.caseTypeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // collecterDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "WxId";
-            this.dataGridViewTextBoxColumn2.HeaderText = "证据名称";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 300;
+            this.collecterDataGridViewTextBoxColumn.DataPropertyName = "Collecter";
+            this.collecterDataGridViewTextBoxColumn.HeaderText = "收集者";
+            this.collecterDataGridViewTextBoxColumn.Name = "collecterDataGridViewTextBoxColumn";
+            this.collecterDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // inspectionPersonNameDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "CraeteTime";
-            this.dataGridViewTextBoxColumn3.HeaderText = "手机持有人";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 150;
+            this.inspectionPersonNameDataGridViewTextBoxColumn.DataPropertyName = "InspectionPersonName";
+            this.inspectionPersonNameDataGridViewTextBoxColumn.HeaderText = "检查人";
+            this.inspectionPersonNameDataGridViewTextBoxColumn.Name = "inspectionPersonNameDataGridViewTextBoxColumn";
+            this.inspectionPersonNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // noteDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "IsSend";
-            this.dataGridViewTextBoxColumn4.HeaderText = "IMEI";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 120;
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "Note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "记录";
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            this.noteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // objectNameDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Type";
-            this.dataGridViewTextBoxColumn5.HeaderText = "手机号码";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.objectNameDataGridViewTextBoxColumn.DataPropertyName = "ObjectName";
+            this.objectNameDataGridViewTextBoxColumn.HeaderText = "对象名称";
+            this.objectNameDataGridViewTextBoxColumn.Name = "objectNameDataGridViewTextBoxColumn";
+            this.objectNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn6
+            // manufacturerNameDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Content";
-            this.dataGridViewTextBoxColumn6.HeaderText = "数据状态";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.manufacturerNameDataGridViewTextBoxColumn.DataPropertyName = "ManufacturerName";
+            this.manufacturerNameDataGridViewTextBoxColumn.HeaderText = "设备厂商";
+            this.manufacturerNameDataGridViewTextBoxColumn.Name = "manufacturerNameDataGridViewTextBoxColumn";
+            this.manufacturerNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn7
+            // organizationCodeDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Path";
-            this.dataGridViewTextBoxColumn7.HeaderText = "创建时间";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 120;
+            this.organizationCodeDataGridViewTextBoxColumn.DataPropertyName = "OrganizationCode";
+            this.organizationCodeDataGridViewTextBoxColumn.HeaderText = "单位代码";
+            this.organizationCodeDataGridViewTextBoxColumn.Name = "organizationCodeDataGridViewTextBoxColumn";
+            this.organizationCodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn8
+            // createCaseTimeDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Status";
-            this.dataGridViewTextBoxColumn8.HeaderText = "备注";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 150;
+            this.createCaseTimeDataGridViewTextBoxColumn.DataPropertyName = "CreateCaseTime";
+            this.createCaseTimeDataGridViewTextBoxColumn.HeaderText = "创建时间";
+            this.createCaseTimeDataGridViewTextBoxColumn.Name = "createCaseTimeDataGridViewTextBoxColumn";
+            this.createCaseTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // caseBindingSource
+            // 
+            this.caseBindingSource.DataSource = typeof(WinAppDemo.Db.Model.Case);
+            // 
+            // proofIdDataGridViewTextBoxColumn
+            // 
+            this.proofIdDataGridViewTextBoxColumn.DataPropertyName = "ProofId";
+            this.proofIdDataGridViewTextBoxColumn.HeaderText = "证据ID";
+            this.proofIdDataGridViewTextBoxColumn.Name = "proofIdDataGridViewTextBoxColumn";
+            this.proofIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // caseIDDataGridViewTextBoxColumn1
+            // 
+            this.caseIDDataGridViewTextBoxColumn1.DataPropertyName = "CaseID";
+            this.caseIDDataGridViewTextBoxColumn1.HeaderText = "所属案件ID";
+            this.caseIDDataGridViewTextBoxColumn1.Name = "caseIDDataGridViewTextBoxColumn1";
+            this.caseIDDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // proofNameDataGridViewTextBoxColumn
+            // 
+            this.proofNameDataGridViewTextBoxColumn.DataPropertyName = "ProofName";
+            this.proofNameDataGridViewTextBoxColumn.HeaderText = "证据名称";
+            this.proofNameDataGridViewTextBoxColumn.Name = "proofNameDataGridViewTextBoxColumn";
+            this.proofNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // proofSerialNumDataGridViewTextBoxColumn
+            // 
+            this.proofSerialNumDataGridViewTextBoxColumn.DataPropertyName = "ProofSerialNum";
+            this.proofSerialNumDataGridViewTextBoxColumn.HeaderText = "序列号";
+            this.proofSerialNumDataGridViewTextBoxColumn.Name = "proofSerialNumDataGridViewTextBoxColumn";
+            this.proofSerialNumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // phoneNumDataGridViewTextBoxColumn
+            // 
+            this.phoneNumDataGridViewTextBoxColumn.DataPropertyName = "PhoneNum";
+            this.phoneNumDataGridViewTextBoxColumn.HeaderText = "手机号";
+            this.phoneNumDataGridViewTextBoxColumn.Name = "phoneNumDataGridViewTextBoxColumn";
+            this.phoneNumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // holderDataGridViewTextBoxColumn
+            // 
+            this.holderDataGridViewTextBoxColumn.DataPropertyName = "Holder";
+            this.holderDataGridViewTextBoxColumn.HeaderText = "持有者";
+            this.holderDataGridViewTextBoxColumn.Name = "holderDataGridViewTextBoxColumn";
+            this.holderDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // credentialsSerialNumDataGridViewTextBoxColumn
+            // 
+            this.credentialsSerialNumDataGridViewTextBoxColumn.DataPropertyName = "CredentialsSerialNum";
+            this.credentialsSerialNumDataGridViewTextBoxColumn.HeaderText = "凭证序列号";
+            this.credentialsSerialNumDataGridViewTextBoxColumn.Name = "credentialsSerialNumDataGridViewTextBoxColumn";
+            this.credentialsSerialNumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // startTimeDataGridViewTextBoxColumn
+            // 
+            this.startTimeDataGridViewTextBoxColumn.DataPropertyName = "StartTime";
+            this.startTimeDataGridViewTextBoxColumn.HeaderText = "开始时间";
+            this.startTimeDataGridViewTextBoxColumn.Name = "startTimeDataGridViewTextBoxColumn";
+            this.startTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // endTimeDataGridViewTextBoxColumn
+            // 
+            this.endTimeDataGridViewTextBoxColumn.DataPropertyName = "EndTime";
+            this.endTimeDataGridViewTextBoxColumn.HeaderText = "结束时间";
+            this.endTimeDataGridViewTextBoxColumn.Name = "endTimeDataGridViewTextBoxColumn";
+            this.endTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deviceTypeDataGridViewTextBoxColumn
+            // 
+            this.deviceTypeDataGridViewTextBoxColumn.DataPropertyName = "DeviceType";
+            this.deviceTypeDataGridViewTextBoxColumn.HeaderText = "设备类型";
+            this.deviceTypeDataGridViewTextBoxColumn.Name = "deviceTypeDataGridViewTextBoxColumn";
+            this.deviceTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // proofTypeDataGridViewTextBoxColumn
+            // 
+            this.proofTypeDataGridViewTextBoxColumn.DataPropertyName = "ProofType";
+            this.proofTypeDataGridViewTextBoxColumn.HeaderText = "证据类型";
+            this.proofTypeDataGridViewTextBoxColumn.Name = "proofTypeDataGridViewTextBoxColumn";
+            this.proofTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // phonePwdDataGridViewTextBoxColumn
+            // 
+            this.phonePwdDataGridViewTextBoxColumn.DataPropertyName = "PhonePwd";
+            this.phonePwdDataGridViewTextBoxColumn.HeaderText = "手机密码";
+            this.phonePwdDataGridViewTextBoxColumn.Name = "phonePwdDataGridViewTextBoxColumn";
+            this.phonePwdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // createProofTimeDataGridViewTextBoxColumn
+            // 
+            this.createProofTimeDataGridViewTextBoxColumn.DataPropertyName = "CreateProofTime";
+            this.createProofTimeDataGridViewTextBoxColumn.HeaderText = "创建时间";
+            this.createProofTimeDataGridViewTextBoxColumn.Name = "createProofTimeDataGridViewTextBoxColumn";
+            this.createProofTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iMEIDataGridViewTextBoxColumn
+            // 
+            this.iMEIDataGridViewTextBoxColumn.DataPropertyName = "IMEI";
+            this.iMEIDataGridViewTextBoxColumn.HeaderText = "IMEI";
+            this.iMEIDataGridViewTextBoxColumn.Name = "iMEIDataGridViewTextBoxColumn";
+            this.iMEIDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iMEI2DataGridViewTextBoxColumn
+            // 
+            this.iMEI2DataGridViewTextBoxColumn.DataPropertyName = "IMEI2";
+            this.iMEI2DataGridViewTextBoxColumn.HeaderText = "IMEI2";
+            this.iMEI2DataGridViewTextBoxColumn.Name = "iMEI2DataGridViewTextBoxColumn";
+            this.iMEI2DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // phoneBrandDataGridViewTextBoxColumn
+            // 
+            this.phoneBrandDataGridViewTextBoxColumn.DataPropertyName = "phoneBrand";
+            this.phoneBrandDataGridViewTextBoxColumn.HeaderText = "手机厂商";
+            this.phoneBrandDataGridViewTextBoxColumn.Name = "phoneBrandDataGridViewTextBoxColumn";
+            this.phoneBrandDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // phoneDataCountDataGridViewTextBoxColumn
+            // 
+            this.phoneDataCountDataGridViewTextBoxColumn.DataPropertyName = "phoneDataCount";
+            this.phoneDataCountDataGridViewTextBoxColumn.HeaderText = "手机数据总数";
+            this.phoneDataCountDataGridViewTextBoxColumn.Name = "phoneDataCountDataGridViewTextBoxColumn";
+            this.phoneDataCountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressBookCountDataGridViewTextBoxColumn
+            // 
+            this.addressBookCountDataGridViewTextBoxColumn.DataPropertyName = "addressBookCount";
+            this.addressBookCountDataGridViewTextBoxColumn.HeaderText = "通讯簿总数";
+            this.addressBookCountDataGridViewTextBoxColumn.Name = "addressBookCountDataGridViewTextBoxColumn";
+            this.addressBookCountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qqDataCountDataGridViewTextBoxColumn
+            // 
+            this.qqDataCountDataGridViewTextBoxColumn.DataPropertyName = "qqDataCount";
+            this.qqDataCountDataGridViewTextBoxColumn.HeaderText = "QQ数据总数";
+            this.qqDataCountDataGridViewTextBoxColumn.Name = "qqDataCountDataGridViewTextBoxColumn";
+            this.qqDataCountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // callRecordsCountDataGridViewTextBoxColumn
+            // 
+            this.callRecordsCountDataGridViewTextBoxColumn.DataPropertyName = "callRecordsCount";
+            this.callRecordsCountDataGridViewTextBoxColumn.HeaderText = "通话记录总数";
+            this.callRecordsCountDataGridViewTextBoxColumn.Name = "callRecordsCountDataGridViewTextBoxColumn";
+            this.callRecordsCountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // momoDataCountDataGridViewTextBoxColumn
+            // 
+            this.momoDataCountDataGridViewTextBoxColumn.DataPropertyName = "momoDataCount";
+            this.momoDataCountDataGridViewTextBoxColumn.HeaderText = "陌陌数据总数";
+            this.momoDataCountDataGridViewTextBoxColumn.Name = "momoDataCountDataGridViewTextBoxColumn";
+            this.momoDataCountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // wxDataCountDataGridViewTextBoxColumn
+            // 
+            this.wxDataCountDataGridViewTextBoxColumn.DataPropertyName = "wxDataCount";
+            this.wxDataCountDataGridViewTextBoxColumn.HeaderText = "微信数据总数";
+            this.wxDataCountDataGridViewTextBoxColumn.Name = "wxDataCountDataGridViewTextBoxColumn";
+            this.wxDataCountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // proofBindingSource
+            // 
+            this.proofBindingSource.DataSource = typeof(WinAppDemo.Db.Model.Proof);
             // 
             // UcAjgl
             // 
@@ -590,10 +762,12 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.caseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proofBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -632,21 +806,40 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WxId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AccountId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sign;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NickName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn District;
-        private System.Windows.Forms.DataGridViewLinkColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.BindingSource caseBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caseIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caseNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caseSerialNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caseTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn collecterDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inspectionPersonNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn objectNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn organizationCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createCaseTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proofIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caseIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proofNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proofSerialNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn holderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn credentialsSerialNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deviceTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proofTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phonePwdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createProofTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iMEIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iMEI2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneBrandDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataCountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressBookCountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qqDataCountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn callRecordsCountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn momoDataCountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wxDataCountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource proofBindingSource;
     }
 }

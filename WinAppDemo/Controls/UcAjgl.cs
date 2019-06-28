@@ -30,48 +30,47 @@ namespace WinAppDemo.Controls
             //新建案件
             FormGjglNewAj form = new FormGjglNewAj();
             form.ShowDialog();
+            Case @case = form.Case;
+
+            using (var context = new CaseContext())
+            {
+                context.Cases.Add(@case);
+                context.SaveChanges();
+                AppContext.CaseID = @case.CaseId;
+            }
         }
 
         private void UcAjgl_Load(object sender, EventArgs e)
         {
-            using (SqliteDbContext db = new SqliteDbContext())
+            using (var context = new CaseContext())
             {
-
-                var userlist = db.WxAccounts.ToList();
-
-                dataGridView1.DataSource = userlist;
-
-                //User people = new User()
-                //{
-                //    station_id = "Hello",
-                //    device_id = "Hello",
-                //    position = "Hello",
-                //    status = 1,
-                //    last_time = "World"
-                //};
-                //db.Users.Add(people);
-                //db.SaveChanges();
+                var cases = context.Cases.AsNoTracking().ToList();
+                this.dataGridView1.DataSource = cases;
             }
         }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1)
+        }
+
+        private void DataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
             {
-                this.label5.Text = this.dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                string wxid = this.dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                this.label7.Text = wxid;
-
-                if (!String.IsNullOrWhiteSpace(wxid))
-                {
-                    using (SqliteDbContext db = new SqliteDbContext())
-                    {
-                        var userlist = db.WxMessages.Where(a => a.WxId == wxid).ToList();
-
-                        dataGridView2.DataSource = userlist;
-                    }
-                }
+                return;
             }
+
+            var row = this.dataGridView1.SelectedRows[0];
+            int caseId = (int)row.Cells[0].Value;
+            this.label5.Text = caseId.ToString();
+            this.label7.Text = row.Cells[1]?.Value?.ToString() ?? string.Empty;
+
+            using (var context = new CaseContext())
+            {
+                var proofs = context.Proofs.AsNoTracking().Where(p => p.CaseID == caseId).ToList();
+                dataGridView2.DataSource = proofs;
+            }
+
         }
     }
 }

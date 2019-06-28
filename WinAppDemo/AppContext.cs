@@ -10,9 +10,9 @@ namespace WinAppDemo
     public class AppContext
     {
         private static AppContext appContext = new AppContext();
-        
+
         public UcZjtq_SJ m_ucZjtq_sj;
-        public UcZjtq_JX m_ucZjtq_jx; 
+        public UcZjtq_JX m_ucZjtq_jx;
         public UcZjtq_SJ_Ljcg m_ucZjtq_sj_ljcg;
         public UcZjtq_SJ_QZ1 m_ucZjtq_sj_qz1;
         public UcZjtq_SJ_QZ2 m_ucZjtq_sj_qz2;
@@ -38,5 +38,7 @@ namespace WinAppDemo
 
             return appContext;
         }
+
+        public static int CaseID = 0;
     }
 }

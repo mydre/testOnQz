@@ -149,7 +149,10 @@
     <Compile Include="Controls\UcZjzs.Designer.cs">
       <DependentUpon>UcZjzs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Db\Base\CaseContext.cs" />
     <Compile Include="Db\Base\SqliteDbContext.cs" />
+    <Compile Include="Db\Model\Case.cs" />
+    <Compile Include="Db\Model\Proof.cs" />
     <Compile Include="Db\Model\User.cs" />
     <Compile Include="Db\Model\WxAccount.cs" />
     <Compile Include="Db\Model\WxFriend.cs" />
@@ -269,10 +272,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Db\CaseMsg.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Db\midwxtrans.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\WinAppDemo.Db.Model.Case.datasource" />
+    <None Include="Properties\DataSources\WinAppDemo.Db.Model.Proof.datasource" />
     <None Include="Properties\DataSources\WinAppDemo.Db.Model.WxFriend.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
