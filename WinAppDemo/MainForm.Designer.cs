@@ -29,25 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.WinContent = new System.Windows.Forms.Panel();
             this.pHeader = new System.Windows.Forms.Panel();
             this.btnTools = new System.Windows.Forms.Panel();
             this.btnZjzs = new System.Windows.Forms.Panel();
             this.btnZjtq = new System.Windows.Forms.Panel();
             this.btnAjgl = new System.Windows.Forms.Panel();
+            this.WinContent = new System.Windows.Forms.Panel();
             this.pHeader.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // WinContent
-            // 
-            this.WinContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.WinContent.Location = new System.Drawing.Point(-1, 60);
-            this.WinContent.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.WinContent.Name = "WinContent";
-            this.WinContent.Size = new System.Drawing.Size(1285, 702);
-            this.WinContent.TabIndex = 1;
             // 
             // pHeader
             // 
@@ -107,6 +96,17 @@
             this.btnAjgl.Size = new System.Drawing.Size(140, 60);
             this.btnAjgl.TabIndex = 0;
             this.btnAjgl.Click += new System.EventHandler(this.BtnAjgl_Click);
+            // 
+            // WinContent
+            // 
+            this.WinContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.WinContent.Location = new System.Drawing.Point(-1, 60);
+            this.WinContent.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.WinContent.Name = "WinContent";
+            this.WinContent.Size = new System.Drawing.Size(1285, 702);
+            this.WinContent.TabIndex = 1;
             // 
             // MainForm
             // 

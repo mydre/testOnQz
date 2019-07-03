@@ -168,9 +168,16 @@ namespace WinAppDemo.Controls
         private void DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            DataGridViewCheckBoxCell dgcc = (DataGridViewCheckBoxCell)this.dataGridView2.Rows[e.RowIndex].Cells[0];
-            Boolean flag = Convert.ToBoolean(dgcc.Value);
-            dgcc.Value = flag == true ? false : true;
+            try
+            {
+                DataGridViewCheckBoxCell dgcc = (DataGridViewCheckBoxCell)this.dataGridView2.Rows[e.RowIndex].Cells[0];
+                Boolean flag = Convert.ToBoolean(dgcc.Value);
+                dgcc.Value = flag == true ? false : true;
+            }
+            catch (Exception)
+            {
+            }
+            
           
 
 
@@ -220,6 +227,19 @@ namespace WinAppDemo.Controls
             
 
 
+        }
+
+        private void dgV1CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewCheckBoxCell dgcc = (DataGridViewCheckBoxCell)this.dataGridView1.Rows[e.RowIndex].Cells[0];
+                Boolean flag = Convert.ToBoolean(dgcc.Value);
+                dgcc.Value = flag == true ? false : true;
+            }
+            catch (Exception)
+            {
+            }
         }
     }
 

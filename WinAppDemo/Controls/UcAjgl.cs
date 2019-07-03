@@ -44,6 +44,9 @@ namespace WinAppDemo.Controls
         {
             using (var context = new CaseContext())
             {
+
+                //this.dataGridView1.DataSource = context.Cases
+                //.ToList();
                 var cases = context.Cases.AsNoTracking().ToList();
                 this.dataGridView1.DataSource = cases;
             }
@@ -51,6 +54,15 @@ namespace WinAppDemo.Controls
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                DataGridViewCheckBoxCell dgcc = (DataGridViewCheckBoxCell)this.dataGridView1.Rows[e.RowIndex].Cells[0];
+                Boolean flag = Convert.ToBoolean(dgcc.Value);
+                dgcc.Value = flag == true ? false : true;
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void DataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -61,7 +73,7 @@ namespace WinAppDemo.Controls
             }
 
             var row = this.dataGridView1.SelectedRows[0];
-            int caseId = (int)row.Cells[0].Value;
+            int caseId = (int)row.Cells[1].Value;
             this.label5.Text = caseId.ToString();
             this.label7.Text = row.Cells[1]?.Value?.ToString() ?? string.Empty;
 
@@ -71,6 +83,11 @@ namespace WinAppDemo.Controls
                 dataGridView2.DataSource = proofs;
             }
 
+        }
+
+        private void clickAddEvidence(object sender, EventArgs e)
+        {
+  
         }
     }
 }

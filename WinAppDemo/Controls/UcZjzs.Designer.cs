@@ -42,7 +42,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,6 +51,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCode = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label10 = new System.Windows.Forms.Label();
             this.ck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.WxName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -216,6 +217,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
             this.idDataGridViewTextBoxColumn,
             this.wxIdDataGridViewTextBoxColumn,
             this.accountIdDataGridViewTextBoxColumn,
@@ -229,9 +231,11 @@
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(576, 191);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgV1CellClick);
             // 
             // panel1
             // 
@@ -249,14 +253,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(576, 173);
             this.panel1.TabIndex = 12;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(279, 212);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 12);
-            this.label10.TabIndex = 21;
             // 
             // label9
             // 
@@ -337,6 +333,23 @@
             this.lblCode.TabIndex = 13;
             this.lblCode.Text = "wuyunjing002";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column1.Width = 50;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(279, 212);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 12);
+            this.label10.TabIndex = 21;
+            // 
             // ck
             // 
             this.ck.HeaderText = "";
@@ -344,7 +357,7 @@
             this.ck.ReadOnly = true;
             this.ck.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ck.Width = 30;
+            this.ck.Width = 50;
             // 
             // WxName
             // 
@@ -449,7 +462,6 @@
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
@@ -463,6 +475,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource wxFriendBindingSource;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn wxIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn accountIdDataGridViewTextBoxColumn;
@@ -470,8 +485,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn signDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nickNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn districtDataGridViewTextBoxColumn;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ck;
         private System.Windows.Forms.DataGridViewTextBoxColumn WxName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Count;
