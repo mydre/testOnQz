@@ -36,5 +36,10 @@ namespace WinAppDemo.Controls
             if (fileDialog.ShowDialog() == DialogResult.OK)
                 textBox2.Text = System.IO.Path.GetFullPath(fileDialog.FileName);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

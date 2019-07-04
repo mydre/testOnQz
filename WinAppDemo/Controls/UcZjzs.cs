@@ -177,11 +177,6 @@ namespace WinAppDemo.Controls
             catch (Exception)
             {
             }
-            
-          
-
-
-
 
             if (e.RowIndex < 0)
             {

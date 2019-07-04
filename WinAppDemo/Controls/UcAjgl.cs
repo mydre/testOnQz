@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinAppDemo.Forms;
-
 using WinAppDemo.Db.Base;
 using WinAppDemo.Db.Model;
+using System.Threading;
 
 namespace WinAppDemo.Controls
 {
@@ -45,8 +45,6 @@ namespace WinAppDemo.Controls
             using (var context = new CaseContext())
             {
 
-                //this.dataGridView1.DataSource = context.Cases
-                //.ToList();
                 var cases = context.Cases.AsNoTracking().ToList();
                 this.dataGridView1.DataSource = cases;
             }
@@ -85,9 +83,36 @@ namespace WinAppDemo.Controls
 
         }
 
+
+
         private void clickAddEvidence(object sender, EventArgs e)
         {
-  
+            //Program.m_mainform.AddNewGjalZj();
+            Console.WriteLine(this.dataGridView1.SelectedRows[0].Index);
+
+            UcZjtq uc = new UcZjtq();
+            uc.Dock = DockStyle.Fill;
+            var p = this.Parent.Parent.Controls["WinContent"].Controls;
+            this.Parent.Parent.Controls["WinContent"].Controls.Clear();
+            p.Add(uc);
+
+
+        }
+
+        private void allCheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox c = sender as CheckBox;
+            bool allCheck = false;
+            if(c.Checked == true)
+            {
+                allCheck = true;
+            }
+            foreach (DataGridViewRow dgvr in dataGridView1.Rows)
+            {
+                DataGridViewCheckBoxCell dgcc = (DataGridViewCheckBoxCell)dgvr.Cells[0];
+                Boolean flag = Convert.ToBoolean(allCheck);
+                dgcc.Value = flag;
+            }
         }
     }
 }
