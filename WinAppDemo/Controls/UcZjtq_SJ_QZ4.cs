@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 using WinAppDemo.Forms;
 
@@ -107,6 +108,29 @@ namespace WinAppDemo.Controls
             m_ucZjtq_sj_qz6.Dock = DockStyle.Fill;
             AppContext.GetInstance().m_ucZjtq_sj.Controls.Clear();
             AppContext.GetInstance().m_ucZjtq_sj.Controls.Add(m_ucZjtq_sj_qz6);
+
+            MessageBox.Show("此处运行微信中转程序！", "提示", MessageBoxButtons.OKCancel);
+
+            //Process PreProcess = new Process();
+            //PreProcess.StartInfo.Arguments = "D:\\手机取证工作路径设置\\案件20190707093739\\HONORV2020190701094546";  //全路径
+            //PreProcess.StartInfo.FileName = Application.StartupPath + "\\BackupConvert.exe";
+            //PreProcess.StartInfo.Verb = "runas";
+            //PreProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            //PreProcess.Start();
+
+            //PreProcess.WaitForExit();
+
+            //MessageBox.Show("接着运行微信中转程序！", "提示", MessageBoxButtons.OKCancel);
+            ////MessageBox.Show(Application.StartupPath, "提示", MessageBoxButtons.OKCancel);
+
+            //Process PreProcess1 = new Process();
+            //PreProcess1.StartInfo.Arguments = "D:\\手机取证工作路径设置\\案件20190707093739\\HONORV2020190701094546";  //全路径
+            //PreProcess1.StartInfo.FileName = Application.StartupPath + "\\OnLineRes.exe";
+            //PreProcess1.StartInfo.Verb = "runas";
+            //PreProcess1.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            //PreProcess1.Start();
+
+            //PreProcess1.WaitForExit();           
 
         }
 

@@ -33,7 +33,8 @@ namespace WinAppDemo.Controls
             };
 
             using (SqliteDbContext context = new SqliteDbContext())
-            {
+            {//ca9529dc14475dbcc7e8553e77ad7d0b
+             //   context.Database.Connection.ConnectionString = "Data Source="+ "D:\\手机取证工作路径设置\\案件20190707093739\\HONORV2020190701094546\\AppData\\Weixin\\a12788cdac6ba28270d03cc2df9a0122" + "\\midwxtrans.db";
                 context.WxAccounts.ToList().ForEach(acc =>
                 {
                     int index = Types.Count + 1;
@@ -41,6 +42,9 @@ namespace WinAppDemo.Controls
                     Types.Add(new TreeNodeTypes() { Id = index + 1, Name = "好友", ParentId = index, Value = "好友" });
                     Types.Add(new TreeNodeTypes() { Id = index + 2, Name = "公众号", ParentId = index, Value = "公众号" });
                     Types.Add(new TreeNodeTypes() { Id = index + 3, Name = "聊天记录", ParentId = index, Value = "聊天记录" });
+                    Types.Add(new TreeNodeTypes() { Id = index + 4, Name = "应用程序", ParentId = index, Value = "应用程序" });
+                    Types.Add(new TreeNodeTypes() { Id = index + 5, Name = "朋友圈", ParentId = index, Value = "朋友圈" });
+                    Types.Add(new TreeNodeTypes() { Id = index + 6, Name = "新朋友", ParentId = index, Value = "新朋友" });
                 });
             }
 
@@ -76,10 +80,7 @@ namespace WinAppDemo.Controls
             switch (wxid)
             {
                 case "好友":
-                case "公众号":
                     {
-                        int type = wxid == "好友" ? 3 : 33;
-
                         panel1.Hide();
                         panel3.Hide();
                         panel2.Show();
@@ -89,7 +90,41 @@ namespace WinAppDemo.Controls
                         using (SqliteDbContext context = new SqliteDbContext())
                         {
                             this.dataGridView1.DataSource = context.WxFriends
-                                .Where(friend => friend.Type == type)
+                                .Where(friend => friend.Type == 3)
+                                .ToList();
+                        }
+
+                        break;
+                    }
+                case "公众号":
+                    { 
+                        panel1.Hide();
+                        panel3.Hide();
+                        panel2.Show();
+                        panel2.Dock = DockStyle.Fill;
+
+                        this.dataGridView1.DataSource = null;
+                        using (SqliteDbContext context = new SqliteDbContext())
+                        {
+                            this.dataGridView1.DataSource = context.WxFriends
+                                .Where(friend => friend.Type == 0)
+                                .ToList();
+                        }
+
+                        break;
+                    }
+                case "应用程序":
+                    {
+                        panel1.Hide();
+                        panel3.Hide();
+                        panel2.Show();
+                        panel2.Dock = DockStyle.Fill;
+
+                        this.dataGridView1.DataSource = null;
+                        using (SqliteDbContext context = new SqliteDbContext())
+                        {
+                            this.dataGridView1.DataSource = context.WxFriends
+                                .Where(friend => friend.Type == 33)
                                 .ToList();
                         }
 
@@ -115,6 +150,21 @@ namespace WinAppDemo.Controls
                                     return row;
                                 }))
                                 .ToArray());
+                        }
+
+                        break;
+                    }
+                case "新朋友":
+                    {
+                        panel1.Hide();
+                        panel3.Hide();
+                        panel2.Show();
+                        panel2.Dock = DockStyle.Fill;
+
+                        this.dataGridView1.DataSource = null;
+                        using (SqliteDbContext context = new SqliteDbContext())
+                        {
+                            this.dataGridView1.DataSource = context.WxNewFriend.ToList();
                         }
 
                         break;

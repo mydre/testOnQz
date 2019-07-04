@@ -18,5 +18,6 @@ namespace WinAppDemo.Db.Base
         public DbSet<WxAccount> WxAccounts { get; set; }
         public DbSet<WxMessage> WxMessages { get; set; }
         public DbSet<WxFriend> WxFriends { get; set; }
+        public DbSet<WxNewFriend> WxNewFriend { get; set; }
     }
 }

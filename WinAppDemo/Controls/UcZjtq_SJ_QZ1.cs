@@ -24,6 +24,7 @@ namespace WinAppDemo.Controls
             AppContext.GetInstance().m_ucZjtq_sj_qz2.Dock = DockStyle.Fill;
             AppContext.GetInstance().m_ucZjtq_sj.Controls.Clear();
             AppContext.GetInstance().m_ucZjtq_sj.Controls.Add(AppContext.GetInstance().m_ucZjtq_sj_qz2);
+            
         }
 
         private void Button2_Click(object sender, EventArgs e)

@@ -24,7 +24,7 @@ namespace WinAppDemo
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            this.Text = "手机数据取证系统LX-A200-努比亚备份";
+            this.Text = "手机数据取证系统SC-A200-努比亚备份";
 
             TitleButtionInit();
             btnAjgl.BackgroundImage = Properties.Resources.ajgl1;

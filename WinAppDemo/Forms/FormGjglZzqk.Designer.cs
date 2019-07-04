@@ -139,9 +139,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(93, 218);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(341, 12);
+            this.label9.Size = new System.Drawing.Size(329, 12);
             this.label9.TabIndex = 13;
-            this.label9.Text = "点击【确定】将通过“新建备份”的方式对应用数据进行提取，";
+            this.label9.Text = "点击【确定】将通过“新建备份”的方式对应用数据进行提取";
             // 
             // label10
             // 
@@ -150,7 +150,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(377, 12);
             this.label10.TabIndex = 14;
-            this.label10.Text = "点击【取消】取消对应用数据的提取，只对当前已获取数据进行解析，";
+            this.label10.Text = "点击【取消】则取消对应用数据的提取，只对当前已获取数据进行解析";
             // 
             // FormGjglZzqk
             // 
