@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using WinAppDemo.Forms;
+
 namespace WinAppDemo
 {
     static class Program
@@ -19,6 +21,9 @@ namespace WinAppDemo
             Application.SetCompatibleTextRenderingDefault(false);
             m_mainform = new MainForm();
             Application.Run(m_mainform);
+
+
+
         }
     }
 }

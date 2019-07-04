@@ -48,6 +48,7 @@ namespace WinAppDemo.Controls
                 });
             }
 
+
             var topNode = new TreeNode();
             topNode.Name = "0";
             topNode.Text = @"努比亚备份（已删除\未删除\总共）";
@@ -143,10 +144,10 @@ namespace WinAppDemo.Controls
                             this.dataGridView2.Rows.AddRange(
                                 context.WxFriends
                                 .Where(friend => friend.Type == 3)
-                                .Select(new Func<WxFriend, DataGridViewRow>(f =>
+                                .Select(new Func<WxFriend, DataGridViewRow>((f) =>
                                 {
                                     var row = new DataGridViewRow();
-                                    row.CreateCells(this.dataGridView2, new[] { f.NickName, context.WxMessages.Count(m => m.WxId == f.WxId).ToString() });
+                                    row.CreateCells(this.dataGridView2, new[] {null, f.NickName, context.WxMessages.Count(m => m.WxId == f.WxId).ToString() });
                                     return row;
                                 }))
                                 .ToArray());
@@ -179,6 +180,7 @@ namespace WinAppDemo.Controls
                         using (SqliteDbContext context = new SqliteDbContext())
                         {
                             acc = context.WxAccounts.FirstOrDefault(a => a.WxId == wxid);
+
                         }
 
                         if (acc == null)
@@ -215,6 +217,17 @@ namespace WinAppDemo.Controls
 
         private void DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            try
+            {
+                DataGridViewCheckBoxCell dgcc = (DataGridViewCheckBoxCell)this.dataGridView2.Rows[e.RowIndex].Cells[0];
+                Boolean flag = Convert.ToBoolean(dgcc.Value);
+                dgcc.Value = flag == true ? false : true;
+            }
+            catch (Exception)
+            {
+            }
+
             if (e.RowIndex < 0)
             {
                 return;
@@ -224,13 +237,13 @@ namespace WinAppDemo.Controls
             {
                 richTextBox1.Clear();
                 string nickName = this.dataGridView2.Rows[e.RowIndex].Cells[0].Value as string;
-                WxFriend friend = context.WxFriends.FirstOrDefault(f => f.NickName == nickName);
-                if (friend == null)
+                WxFriend friend = context.WxFriends.FirstOrDefault(f => f.NickName == nickName);//仅查找一条数据
+                if (friend == null)//如果没有找到
                 {
                     return;
                 }
 
-                var messages = context.WxMessages
+                var messages = context.WxMessages //
                     .Where(m => m.WxId == friend.WxId)
                     .OrderBy(m => m.CraeteTime)
                     .ToList();
@@ -255,6 +268,22 @@ namespace WinAppDemo.Controls
                     richTextBox1.SelectionBackColor = Color.WhiteSmoke;
                     richTextBox1.AppendText($"{m.Content}\n\n");
                 });
+            }
+            
+
+
+        }
+
+        private void dgV1CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewCheckBoxCell dgcc = (DataGridViewCheckBoxCell)this.dataGridView1.Rows[e.RowIndex].Cells[0];
+                Boolean flag = Convert.ToBoolean(dgcc.Value);
+                dgcc.Value = flag == true ? false : true;
+            }
+            catch (Exception)
+            {
             }
         }
     }

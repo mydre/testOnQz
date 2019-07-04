@@ -39,6 +39,11 @@ namespace WinAppDemo
             return appContext;
         }
 
+        public static void setInstanceNull()
+        {
+            appContext = null;
+        }
+
         public static int CaseID = 0;
     }
 }

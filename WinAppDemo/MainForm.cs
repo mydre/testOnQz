@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using WinAppDemo.Controls;
 using WinAppDemo.Db.Base;
 using WinAppDemo.Db.Model;
-
+using System.Threading;
 namespace WinAppDemo
 {
     public partial class MainForm : Form
@@ -47,6 +47,7 @@ namespace WinAppDemo
             btnZjtq.BackgroundImage = Properties.Resources.zjtq;
             btnZjzs.BackgroundImage = Properties.Resources.zjzs;
             btnTools.BackgroundImage = Properties.Resources.gj;
+            setDirectory.BackgroundImage = Properties.Resources.set;
         }
 
         private void BtnAjgl_Click(object sender, EventArgs e)
@@ -85,6 +86,26 @@ namespace WinAppDemo
             TitleButtionInit();
             btnZjzs.BackgroundImage = Properties.Resources.zjzs1;
             DisplayContent(new UcZjzs());
+        }
+
+        private void BtnSet_Click(object sender, EventArgs e)
+        {
+            TitleButtionInit();
+            setDirectory.BackgroundImage = Properties.Resources.set1;
+
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.Description = "请选择工作目录";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                if (string.IsNullOrEmpty(dialog.SelectedPath))
+                {
+                    MessageBox.Show(this, "文件夹路径不能为空", "提示");
+                    return;
+                }
+                MessageBox.Show(dialog.SelectedPath);
+                AppConfig.getAppConfig().working_directory = dialog.SelectedPath;//保存工作路径
+            }
+            setDirectory.BackgroundImage = Properties.Resources.set;
         }
     }
 }
