@@ -27,7 +27,7 @@ namespace WinAppDemo.Forms
 
             using (var context = new CaseContext())
             {
-                Case @case = context.Cases.Find(39);
+                Case @case = context.Cases.Find(AppConfig.getAppConfig().caseId_selected_working);
                 Proof proof = new Proof()
                 {
                     Case = @case,
@@ -45,6 +45,7 @@ namespace WinAppDemo.Forms
             }
 
             this.Close();
+            AppConfig.AppConfigAddAdvinceClear();
             AppContext.setInstanceNull();
         }
     }
