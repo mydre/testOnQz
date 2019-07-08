@@ -19,13 +19,18 @@ namespace WinAppDemo.Forms
         {
             InitializeComponent();
 
+            textBox1.Text = "案件" +DateTime.Now.ToString("yyyyMMddHHmmss");                   
+
             textBox2.Text = Guid.NewGuid().ToString();
+
+            Program.m_mainform.g_workPath += "\\"+ textBox1.Text;
+            
         }
 
         private void BtnOk_Click(object sender, EventArgs e)
         {
             Program.m_mainform.AddNewGjalZj();
-
+           
             this.Case.CaseName = textBox1.Text;
             this.Case.CaseSerialNum = textBox2.Text;
             this.Case.CaseType = comboBox1.Text;

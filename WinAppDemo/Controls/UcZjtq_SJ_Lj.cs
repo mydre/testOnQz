@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace WinAppDemo.Controls
@@ -24,6 +26,25 @@ namespace WinAppDemo.Controls
             AppContext.GetInstance().m_ucZjtq_sj_ljcg.Dock = DockStyle.Fill;
             AppContext.GetInstance().m_ucZjtq_sj.Controls.Clear();
             AppContext.GetInstance().m_ucZjtq_sj.Controls.Add(AppContext.GetInstance().m_ucZjtq_sj_ljcg);
+
+            ////获取手机型号由于创建证据目录
+            //Process PreProcess = new Process();
+            //PreProcess.StartInfo.Arguments = "D: 0";  
+            //PreProcess.StartInfo.FileName = Application.StartupPath + "\\socketPbi.exe";
+            //PreProcess.StartInfo.Verb = "runas";
+            //PreProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            //PreProcess.Start();
+            //PreProcess.WaitForExit();
+
+            //string filename=Application.StartupPath + "\\phoneModel.txt";
+            ////判断目标文件是否存在
+            //bool flag = File.Exists(filename);
+            //if (flag)
+            //{
+            //    string Str = File.ReadAllText(filename, Encoding.Default);
+            //    Program.m_mainform.g_workPath += Str;
+            //}
+            
         }
     }
 }

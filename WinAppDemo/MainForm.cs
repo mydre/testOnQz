@@ -17,6 +17,8 @@ namespace WinAppDemo
 {
     public partial class MainForm : Form
     {
+        public string g_workPath="";
+
         public MainForm()
         {
             InitializeComponent();
@@ -102,10 +104,12 @@ namespace WinAppDemo
                     MessageBox.Show(this, "文件夹路径不能为空", "提示");
                     return;
                 }
-                MessageBox.Show(dialog.SelectedPath);
+                //MessageBox.Show(dialog.SelectedPath);
                 AppConfig.getAppConfig().working_directory = dialog.SelectedPath;//保存工作路径
+                g_workPath = dialog.SelectedPath;
             }
             setDirectory.BackgroundImage = Properties.Resources.set;
         }
+               
     }
 }
