@@ -30,7 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -61,8 +63,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.Column2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.caseIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caseNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caseSerialNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,6 +128,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "案件列表";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox1.Location = new System.Drawing.Point(12, 67);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(46, 16);
+            this.checkBox1.TabIndex = 2;
+            this.checkBox1.Text = "全选";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.allCheckedChanged);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -160,6 +174,15 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.DataGridView1_SelectionChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column1.Width = 50;
             // 
             // panel1
             // 
@@ -353,6 +376,7 @@
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
             this.proofIdDataGridViewTextBoxColumn,
             this.caseIDDataGridViewTextBoxColumn1,
             this.proofNameDataGridViewTextBoxColumn,
@@ -381,10 +405,12 @@
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowTemplate.Height = 23;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(567, 775);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid2_CellClick);
             // 
             // panel2
             // 
@@ -505,27 +531,14 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "案件名称";
             // 
-            // Column1
+            // Column2
             // 
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column1.Width = 50;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBox1.Location = new System.Drawing.Point(12, 67);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(46, 16);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "全选";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.allCheckedChanged);
+            this.Column2.HeaderText = "";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column2.Width = 50;
             // 
             // caseIdDataGridViewTextBoxColumn
             // 
@@ -823,28 +836,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proofIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn caseIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proofNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proofSerialNumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn holderDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn credentialsSerialNumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deviceTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proofTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phonePwdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn createProofTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iMEIDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iMEI2DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneBrandDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataCountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressBookCountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qqDataCountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn callRecordsCountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn momoDataCountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn wxDataCountDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
@@ -870,5 +861,28 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn organizationCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn createCaseTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proofIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caseIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proofNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proofSerialNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn holderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn credentialsSerialNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deviceTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proofTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phonePwdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createProofTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iMEIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iMEI2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneBrandDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataCountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressBookCountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qqDataCountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn callRecordsCountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn momoDataCountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wxDataCountDataGridViewTextBoxColumn;
     }
 }
