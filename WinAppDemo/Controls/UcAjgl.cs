@@ -27,17 +27,19 @@ namespace WinAppDemo.Controls
 
         private void Button2_Click(object sender, EventArgs e)
         {
+
             //新建案件
             FormGjglNewAj form = new FormGjglNewAj();
             form.ShowDialog();
             Case @case = form.Case;
-
             using (var context = new CaseContext())
             {
                 context.Cases.Add(@case);
                 context.SaveChanges();
                 AppContext.CaseID = @case.CaseId;
             }
+
+            Program.m_mainform.AddNewGjalAj();
         }
 
         private void UcAjgl_Load(object sender, EventArgs e)
@@ -127,12 +129,13 @@ namespace WinAppDemo.Controls
             }
             ac.caseId_selected_row = -1;
 
+            Program.m_mainform.AddNewGjalZj();
 
-            UcZjtq uc = new UcZjtq();
-            uc.Dock = DockStyle.Fill;
-            var p = this.Parent.Parent.Controls["WinContent"].Controls;
-            this.Parent.Parent.Controls["WinContent"].Controls.Clear();
-            p.Add(uc);
+            //UcZjtq uc = new UcZjtq();
+            //uc.Dock = DockStyle.Fill;
+            //var p = this.Parent.Parent.Controls["WinContent"].Controls;
+            //this.Parent.Parent.Controls["WinContent"].Controls.Clear();
+            //p.Add(uc);
 
 
         }

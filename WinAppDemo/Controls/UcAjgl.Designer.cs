@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -51,6 +49,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -63,18 +62,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Column2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.caseIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.caseNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.caseSerialNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.caseTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.collecterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inspectionPersonNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.objectNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manufacturerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.organizationCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createCaseTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proofIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caseIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,8 +86,20 @@
             this.momoDataCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wxDataCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.proofBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.createCaseTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.organizationCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.objectNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inspectionPersonNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.collecterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caseTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caseSerialNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caseNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caseIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -113,6 +112,7 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.caseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proofBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -140,49 +140,6 @@
             this.checkBox1.Text = "全选";
             this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.allCheckedChanged);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.caseIdDataGridViewTextBoxColumn,
-            this.caseNameDataGridViewTextBoxColumn,
-            this.caseSerialNumDataGridViewTextBoxColumn,
-            this.caseTypeDataGridViewTextBoxColumn,
-            this.collecterDataGridViewTextBoxColumn,
-            this.inspectionPersonNameDataGridViewTextBoxColumn,
-            this.noteDataGridViewTextBoxColumn,
-            this.objectNameDataGridViewTextBoxColumn,
-            this.manufacturerNameDataGridViewTextBoxColumn,
-            this.organizationCodeDataGridViewTextBoxColumn,
-            this.createCaseTimeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.caseBindingSource;
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 64);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(691, 896);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.DataGridView1_SelectionChanged);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column1.Width = 50;
             // 
             // panel1
             // 
@@ -412,6 +369,15 @@
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid2_CellClick);
             // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column2.Width = 50;
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -530,92 +496,6 @@
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 2;
             this.label4.Text = "案件名称";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column2.Width = 50;
-            // 
-            // caseIdDataGridViewTextBoxColumn
-            // 
-            this.caseIdDataGridViewTextBoxColumn.DataPropertyName = "CaseId";
-            this.caseIdDataGridViewTextBoxColumn.HeaderText = "案件编号";
-            this.caseIdDataGridViewTextBoxColumn.Name = "caseIdDataGridViewTextBoxColumn";
-            this.caseIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // caseNameDataGridViewTextBoxColumn
-            // 
-            this.caseNameDataGridViewTextBoxColumn.DataPropertyName = "CaseName";
-            this.caseNameDataGridViewTextBoxColumn.HeaderText = "案件名称";
-            this.caseNameDataGridViewTextBoxColumn.Name = "caseNameDataGridViewTextBoxColumn";
-            this.caseNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // caseSerialNumDataGridViewTextBoxColumn
-            // 
-            this.caseSerialNumDataGridViewTextBoxColumn.DataPropertyName = "CaseSerialNum";
-            this.caseSerialNumDataGridViewTextBoxColumn.HeaderText = "案件序号";
-            this.caseSerialNumDataGridViewTextBoxColumn.Name = "caseSerialNumDataGridViewTextBoxColumn";
-            this.caseSerialNumDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // caseTypeDataGridViewTextBoxColumn
-            // 
-            this.caseTypeDataGridViewTextBoxColumn.DataPropertyName = "CaseType";
-            this.caseTypeDataGridViewTextBoxColumn.HeaderText = "案件类型";
-            this.caseTypeDataGridViewTextBoxColumn.Name = "caseTypeDataGridViewTextBoxColumn";
-            this.caseTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // collecterDataGridViewTextBoxColumn
-            // 
-            this.collecterDataGridViewTextBoxColumn.DataPropertyName = "Collecter";
-            this.collecterDataGridViewTextBoxColumn.HeaderText = "收集者";
-            this.collecterDataGridViewTextBoxColumn.Name = "collecterDataGridViewTextBoxColumn";
-            this.collecterDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // inspectionPersonNameDataGridViewTextBoxColumn
-            // 
-            this.inspectionPersonNameDataGridViewTextBoxColumn.DataPropertyName = "InspectionPersonName";
-            this.inspectionPersonNameDataGridViewTextBoxColumn.HeaderText = "检查人";
-            this.inspectionPersonNameDataGridViewTextBoxColumn.Name = "inspectionPersonNameDataGridViewTextBoxColumn";
-            this.inspectionPersonNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // noteDataGridViewTextBoxColumn
-            // 
-            this.noteDataGridViewTextBoxColumn.DataPropertyName = "Note";
-            this.noteDataGridViewTextBoxColumn.HeaderText = "记录";
-            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
-            this.noteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // objectNameDataGridViewTextBoxColumn
-            // 
-            this.objectNameDataGridViewTextBoxColumn.DataPropertyName = "ObjectName";
-            this.objectNameDataGridViewTextBoxColumn.HeaderText = "对象名称";
-            this.objectNameDataGridViewTextBoxColumn.Name = "objectNameDataGridViewTextBoxColumn";
-            this.objectNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // manufacturerNameDataGridViewTextBoxColumn
-            // 
-            this.manufacturerNameDataGridViewTextBoxColumn.DataPropertyName = "ManufacturerName";
-            this.manufacturerNameDataGridViewTextBoxColumn.HeaderText = "设备厂商";
-            this.manufacturerNameDataGridViewTextBoxColumn.Name = "manufacturerNameDataGridViewTextBoxColumn";
-            this.manufacturerNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // organizationCodeDataGridViewTextBoxColumn
-            // 
-            this.organizationCodeDataGridViewTextBoxColumn.DataPropertyName = "OrganizationCode";
-            this.organizationCodeDataGridViewTextBoxColumn.HeaderText = "单位代码";
-            this.organizationCodeDataGridViewTextBoxColumn.Name = "organizationCodeDataGridViewTextBoxColumn";
-            this.organizationCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // createCaseTimeDataGridViewTextBoxColumn
-            // 
-            this.createCaseTimeDataGridViewTextBoxColumn.DataPropertyName = "CreateCaseTime";
-            this.createCaseTimeDataGridViewTextBoxColumn.HeaderText = "创建时间";
-            this.createCaseTimeDataGridViewTextBoxColumn.Name = "createCaseTimeDataGridViewTextBoxColumn";
-            this.createCaseTimeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // caseBindingSource
             // 
@@ -779,6 +659,126 @@
             // 
             this.proofBindingSource.DataSource = typeof(WinAppDemo.Db.Model.Proof);
             // 
+            // createCaseTimeDataGridViewTextBoxColumn
+            // 
+            this.createCaseTimeDataGridViewTextBoxColumn.DataPropertyName = "CreateCaseTime";
+            this.createCaseTimeDataGridViewTextBoxColumn.HeaderText = "创建时间";
+            this.createCaseTimeDataGridViewTextBoxColumn.Name = "createCaseTimeDataGridViewTextBoxColumn";
+            this.createCaseTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // organizationCodeDataGridViewTextBoxColumn
+            // 
+            this.organizationCodeDataGridViewTextBoxColumn.DataPropertyName = "OrganizationCode";
+            this.organizationCodeDataGridViewTextBoxColumn.HeaderText = "单位代码";
+            this.organizationCodeDataGridViewTextBoxColumn.Name = "organizationCodeDataGridViewTextBoxColumn";
+            this.organizationCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // manufacturerNameDataGridViewTextBoxColumn
+            // 
+            this.manufacturerNameDataGridViewTextBoxColumn.DataPropertyName = "ManufacturerName";
+            this.manufacturerNameDataGridViewTextBoxColumn.HeaderText = "设备厂商";
+            this.manufacturerNameDataGridViewTextBoxColumn.Name = "manufacturerNameDataGridViewTextBoxColumn";
+            this.manufacturerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // objectNameDataGridViewTextBoxColumn
+            // 
+            this.objectNameDataGridViewTextBoxColumn.DataPropertyName = "ObjectName";
+            this.objectNameDataGridViewTextBoxColumn.HeaderText = "对象名称";
+            this.objectNameDataGridViewTextBoxColumn.Name = "objectNameDataGridViewTextBoxColumn";
+            this.objectNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "Note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "记录";
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            this.noteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // inspectionPersonNameDataGridViewTextBoxColumn
+            // 
+            this.inspectionPersonNameDataGridViewTextBoxColumn.DataPropertyName = "InspectionPersonName";
+            this.inspectionPersonNameDataGridViewTextBoxColumn.HeaderText = "检查人";
+            this.inspectionPersonNameDataGridViewTextBoxColumn.Name = "inspectionPersonNameDataGridViewTextBoxColumn";
+            this.inspectionPersonNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // collecterDataGridViewTextBoxColumn
+            // 
+            this.collecterDataGridViewTextBoxColumn.DataPropertyName = "Collecter";
+            this.collecterDataGridViewTextBoxColumn.HeaderText = "收集者";
+            this.collecterDataGridViewTextBoxColumn.Name = "collecterDataGridViewTextBoxColumn";
+            this.collecterDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // caseTypeDataGridViewTextBoxColumn
+            // 
+            this.caseTypeDataGridViewTextBoxColumn.DataPropertyName = "CaseType";
+            this.caseTypeDataGridViewTextBoxColumn.HeaderText = "案件类型";
+            this.caseTypeDataGridViewTextBoxColumn.Name = "caseTypeDataGridViewTextBoxColumn";
+            this.caseTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // caseSerialNumDataGridViewTextBoxColumn
+            // 
+            this.caseSerialNumDataGridViewTextBoxColumn.DataPropertyName = "CaseSerialNum";
+            this.caseSerialNumDataGridViewTextBoxColumn.HeaderText = "案件序号";
+            this.caseSerialNumDataGridViewTextBoxColumn.Name = "caseSerialNumDataGridViewTextBoxColumn";
+            this.caseSerialNumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // caseNameDataGridViewTextBoxColumn
+            // 
+            this.caseNameDataGridViewTextBoxColumn.DataPropertyName = "CaseName";
+            this.caseNameDataGridViewTextBoxColumn.HeaderText = "案件名称";
+            this.caseNameDataGridViewTextBoxColumn.Name = "caseNameDataGridViewTextBoxColumn";
+            this.caseNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // caseIdDataGridViewTextBoxColumn
+            // 
+            this.caseIdDataGridViewTextBoxColumn.DataPropertyName = "CaseId";
+            this.caseIdDataGridViewTextBoxColumn.HeaderText = "案件编号";
+            this.caseIdDataGridViewTextBoxColumn.Name = "caseIdDataGridViewTextBoxColumn";
+            this.caseIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column1.Width = 50;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.caseIdDataGridViewTextBoxColumn,
+            this.caseNameDataGridViewTextBoxColumn,
+            this.caseSerialNumDataGridViewTextBoxColumn,
+            this.caseTypeDataGridViewTextBoxColumn,
+            this.collecterDataGridViewTextBoxColumn,
+            this.inspectionPersonNameDataGridViewTextBoxColumn,
+            this.noteDataGridViewTextBoxColumn,
+            this.objectNameDataGridViewTextBoxColumn,
+            this.manufacturerNameDataGridViewTextBoxColumn,
+            this.organizationCodeDataGridViewTextBoxColumn,
+            this.createCaseTimeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.caseBindingSource;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 64);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(691, 896);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.DataGridView1_SelectionChanged);
+            // 
             // UcAjgl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -792,7 +792,6 @@
             this.SizeChanged += new System.EventHandler(this.UcAjgl_SizeChanged);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -808,6 +807,7 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.caseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proofBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -815,7 +815,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
@@ -849,18 +848,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn caseIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn caseNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn caseSerialNumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn caseTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn collecterDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn inspectionPersonNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn objectNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn organizationCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn createCaseTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn proofIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn caseIDDataGridViewTextBoxColumn1;
@@ -884,5 +871,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn callRecordsCountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn momoDataCountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn wxDataCountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caseIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caseNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caseSerialNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caseTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn collecterDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inspectionPersonNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn objectNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn organizationCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createCaseTimeDataGridViewTextBoxColumn;
     }
 }

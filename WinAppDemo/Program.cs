@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using WinAppDemo.Forms;
-
+using WinAppDemo.Controls;
 namespace WinAppDemo
 {
     static class Program
     {
         public static MainForm m_mainform = null;
+
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>

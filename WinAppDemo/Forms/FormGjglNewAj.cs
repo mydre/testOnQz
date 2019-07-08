@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinAppDemo.Db.Model;
-
+using WinAppDemo.Db.Base;
+using WinAppDemo.Controls;
+using System.Threading;
 namespace WinAppDemo.Forms
 {
     public partial class FormGjglNewAj : Form
@@ -29,8 +31,6 @@ namespace WinAppDemo.Forms
 
         private void BtnOk_Click(object sender, EventArgs e)
         {
-            Program.m_mainform.AddNewGjalZj();
-           
             this.Case.CaseName = textBox1.Text;
             this.Case.CaseSerialNum = textBox2.Text;
             this.Case.CaseType = comboBox1.Text;
@@ -40,14 +40,18 @@ namespace WinAppDemo.Forms
             this.Case.InspectionPersonName = textBox5.Text;
             this.Case.InspectionPersonDepartMent = textBox6.Text;
             this.Case.OrganizationCode = textBox7.Text;
-            this.Case.Note = textBox8.Text;
-
+            this.Case.Note = textBox8.Text; 
+            MessageBox.Show("案件添加成功！");         
             this.Close();
         }
+
+
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             MessageBox.Show("取消");
         }
+
+        delegate void MyDelegate();
     }
 }

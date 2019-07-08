@@ -90,6 +90,13 @@ namespace WinAppDemo
             DisplayContent(new UcZjzs());
         }
 
+        public void AddNewGjalAj()
+        {
+            TitleButtionInit();
+            btnAjgl.BackgroundImage = Properties.Resources.ajgl1;
+            DisplayContent(new UcAjgl());
+        }
+
         private void BtnSet_Click(object sender, EventArgs e)
         {
             TitleButtionInit();

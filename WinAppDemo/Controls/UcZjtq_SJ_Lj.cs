@@ -21,6 +21,15 @@ namespace WinAppDemo.Controls
 
         private void Button1_Click(object sender, EventArgs e)
         {
+
+            if(AppConfig.getAppConfig().caseId_selected_working == -1)
+            {
+                MessageBox.Show("请首先选择案件,然后单击添加案件的按钮！");
+                AppConfig.getAppConfig().caseId_selected_row = -1;
+                Program.m_mainform.AddNewGjalAj();
+                return;
+            }
+
             AppContext.GetInstance().m_ucZjtq_sj.Controls.Clear();
 
             AppContext.GetInstance().m_ucZjtq_sj_ljcg.Dock = DockStyle.Fill;
