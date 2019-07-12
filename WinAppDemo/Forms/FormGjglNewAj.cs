@@ -49,7 +49,8 @@ namespace WinAppDemo.Forms
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("取消");
+            this.Close();
+            //MessageBox.Show("取消");
         }
 
         delegate void MyDelegate();
