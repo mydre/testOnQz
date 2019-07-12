@@ -27,10 +27,11 @@ namespace WinAppDemo.Controls
 
         private void Button2_Click(object sender, EventArgs e)
         {
-
             //新建案件
             FormGjglNewAj form = new FormGjglNewAj();
-            form.ShowDialog();
+            string s = form.ShowDialog().ToString();
+            if(s == "Cancel") return;
+
             Case @case = form.Case;
             using (var context = new CaseContext())
             {
